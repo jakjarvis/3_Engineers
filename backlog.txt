@@ -1,0 +1,8 @@
+Committed:
+- Add sticky nav
+- Improve load speed
+- Change background pictures to actual taproom
+
+Proposed:
+- Add analytics
+- Deploy on server controlled by me
