@@ -83,12 +83,16 @@
             <li><a href="#mates">Mates</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
-          <a
-            href="#"
-            class="mobile-nav-icon js--nav-icon"
-            onclick="myFunction()"
-            ><i class="fa fa-bars" aria-hidden="true"></i
-          ></a>
+          <a class="mobile-nav-icon js--nav-icon">
+            <ion-icon
+              class="menu-icon open-icon"
+              name="menu-outline"
+            ></ion-icon>
+            <ion-icon
+              class="menu-icon close-icon"
+              name="close-outline"
+            ></ion-icon>
+          </a>
         </div>
       </nav>
       <div class="row front-page">
@@ -505,23 +509,6 @@
         >Three Engineers Brewery
       </p>
     </section>
-
-    <!-- Several sections of Javascript pulled into the HTML due to deployment issues -->
-    <script>
-      $(".js--nav-icon").click(function () {
-        var nav = $(".js--main-nav");
-        var icon = $(".js--nav-icon i");
-
-        nav.slideToggle(200);
-        if (icon.hasClass("fa-bars")) {
-          icon.addClass("fa-times-circle-o");
-          icon.removeClass("fa-bars");
-        } else {
-          icon.addClass("fa-bars");
-          icon.removeClass("fa-times-circle-o");
-        }
-      });
-    </script>
 
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
     <script src="https://use.fontawesome.com/eb0dd1db7e.js"></script>
