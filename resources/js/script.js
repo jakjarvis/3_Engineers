@@ -36,46 +36,21 @@ $(document).ready(function () {
       .appendTo(".slider");
   }, 3000);
 
-/* Sticky nav */
+  /* Mobile nav */
 
-const sectionSplash = document.querySelector(".section-splash");
+  const navBtn = document.querySelector(".mobile-nav-icon");
+  const mainNav = document.querySelector(".main-nav");
+  const openIcon = document.querySelector(".open-icon");
+  const closeIcon = document.querySelector(".close-icon");
 
-const obs = new IntersectionObserver(
-    function (entries) {
-        const ent = entries[0];
-        console.log(ent);
-        if (ent.isIntersecting === false) {
-            document.querySelector('.header').classList.add('sticky');
-            sectionSplash.classList.add('sticky');
-        }
-        if (ent.isIntersecting === true) {
-            document.querySelector('.header').classList.remove('sticky');
-            sectionSplash.classList.remove('sticky');
-        }
-    }, {
-    // Looking inside the viewport
-    root: null,
-    // When 0% of the section is in the viewport
-    threshold: 0,
-    rootMargin: "-5px"
-});
-obs.observe(sectionSplash);
+  navBtn.addEventListener("click", function () {
+    console.log("click");
+    openIcon.classList.toggle("hidden");
+    closeIcon.classList.toggle("hidden");
+  });
 
-/* Mobile nav */
-
-const navBtn = document.querySelector('.mobile-nav-icon');
-const mainNav = document.querySelector('.main-nav');
-const openIcon = document.querySelector('.open-icon');
-const closeIcon = document.querySelector('.close-icon');
-
-navBtn.addEventListener('click', function () {
-    mainNav.classList.toggle('nav-open');
-    openIcon.classList.toggle('nav-open');
-    closeIcon.classList.toggle('nav-open');
-})
-
-/* Cog banner */
-$(".js--nav-icon").click(function () {
+  /* Mobile Nav Dropdown */
+  $(".js--nav-icon").click(function () {
     var nav = $(".js--main-nav");
     var icon = $(".js--nav-icon i");
 
@@ -88,4 +63,4 @@ $(".js--nav-icon").click(function () {
       icon.removeClass("fa-times-circle-o");
     }
   });
-  
+});
