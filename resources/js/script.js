@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  /* navigation scroll */
+  /* Navigation scroll */
   $(function () {
     $("a[href*=#]:not([href=#])").click(function () {
       if (
@@ -39,14 +39,15 @@ $(document).ready(function () {
   /* Mobile nav */
 
   const navBtn = document.querySelector(".mobile-nav-icon");
-  const mainNav = document.querySelector(".main-nav");
   const openIcon = document.querySelector(".open-icon");
   const closeIcon = document.querySelector(".close-icon");
+  const header = document.querySelector("header");
 
   navBtn.addEventListener("click", function () {
     console.log("click");
     openIcon.classList.toggle("hidden");
     closeIcon.classList.toggle("hidden");
+    header.classList.toggle("open");
   });
 
   /* Mobile Nav Dropdown */
@@ -63,4 +64,30 @@ $(document).ready(function () {
       icon.removeClass("fa-times-circle-o");
     }
   });
+
+  /* Sticky Nav */
+  const sectionSplash = document.querySelector(".section-splash");
+
+  const obs = new IntersectionObserver(
+    function (entries) {
+      const ent = entries[0];
+      console.log(ent);
+      if (ent.isIntersecting === false) {
+        document.querySelector(".header").classList.add("sticky");
+        sectionSplash.classList.add("sticky");
+      }
+      if (ent.isIntersecting === true) {
+        document.querySelector(".header").classList.remove("sticky");
+        sectionSplash.classList.remove("sticky");
+      }
+    },
+    {
+      // Looking inside the viewport
+      root: null,
+      // When 0% of the section is in the viewport
+      threshold: 0,
+      rootMargin: "-5px",
+    }
+  );
+  obs.observe(sectionSplash);
 });

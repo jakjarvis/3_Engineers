@@ -143,22 +143,24 @@
 @media only screen and (max-width: 767px) {
   /* HEADER */
 
-  .front-page {
+  header.open {
+    height: 250px;
+    align-items: flex-start;
+  }
+
+  .section-splash {
     position: relative;
     width: 100vw;
     display: flex;
     flex-flow: column;
-    height: 40vh;
-  }
-
-  .nav-logo {
-    height: 15vw;
-    margin-bottom: 100px;
+    justify-content: center;
   }
 
   #main-nav {
     display: none;
+    position: absolute;
     float: right;
+    right: 40px;
     margin: 20px 70px 0 0;
     text-align: right;
   }

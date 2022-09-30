@@ -98,20 +98,24 @@ input[type="submit"]:active {
 /* ------------------------------------ */
 
 header {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(img/timothy-dykes-beer.jpg);
-  height: 100vh;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  color: #ededed;
+  height: 10vh;
+  width: 100vw;
+  position: absolute;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: 1s;
 }
 
-/* Main Navi */
+.nav {
+  align-self: flex-end;
+  margin-right: 20px;
+}
 
 .nav-logo {
   display: block;
-  height: 100px;
+  height: 50px;
   width: auto;
   float: left;
   border-radius: 25px;
@@ -122,10 +126,10 @@ header {
   display: none;
 }
 
+/* Main Navi */
 #main-nav {
   float: right;
   list-style: none;
-  margin-top: 40px;
   margin-right: 20px;
 }
 
@@ -141,10 +145,18 @@ header {
   font-size: 150%;
 }
 
+/* Sticky navi */
+.sticky {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #fff;
+}
+
 /* Mobile navi */
 .mobile-nav-icon {
-  position: absolute;
-  right: 0;
+  right: 15px;
   margin-top: 15px;
   margin-right: 20px;
   cursor: pointer;
@@ -161,28 +173,34 @@ header {
 }
 
 /* Sticky nav */
-.header.sticky {
+.sticky {
   position: fixed;
   top: 0;
   bottom: 0;
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(0, 0, 0, 0.7);
   box-shadow: 0 2px 2px #b7b7b7;
 }
 
-.section-splash.sticky {
-  margin-top: 60px;
-}
+/* ---------------------------- */
+/* SPLASH */
+/* ---------------------------- */
 
-/* Slider */
-.front-page {
+.section-splash {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(img/timothy-dykes-beer.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  background-attachment: fixed;
+  color: rgba(255, 255, 255);
   position: relative;
   width: 100vw;
   display: flex;
   align-items: center;
-  height: 70vh;
 }
 
+/* Slider */
 .tagline {
   display: block;
   float: left;
