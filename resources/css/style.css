@@ -17,6 +17,7 @@ body {
   color: #000000;
   font-family: "Roboto Condensed";
   font-size: 20px;
+  overflow-x: hidden;
 }
 
 /* ------------------------------------ */
@@ -192,13 +193,21 @@ header {
   background-size: cover;
   background-position: center;
   height: 100vh;
+  width: 100vw;
   background-attachment: fixed;
   color: rgba(255, 255, 255);
   position: relative;
-  width: 100vw;
   display: flex;
   align-items: center;
+  padding: 0;
+  overflow: hidden;
 }
+
+background-size: cover;
+background-position: center;
+background-attachment: fixed;
+display: flex;
+justify-content: center;
 
 /* Slider */
 .tagline {
