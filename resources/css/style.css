@@ -203,12 +203,6 @@ header {
   overflow: hidden;
 }
 
-background-size: cover;
-background-position: center;
-background-attachment: fixed;
-display: flex;
-justify-content: center;
-
 /* Slider */
 .tagline {
   display: block;
